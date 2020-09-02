@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+//import { makeStyles } from '@material-ui/core/styles';
+import {Topheader} from './Components/Topheader/Topheader'
 import './App.css';
+//import image from './bg.jpg';
+
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>Alhumdolillah</code> My First App
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div  className="main">
+      <div className="container">
+        
+        <Topheader/>
+     </div>
+      </div>
   );
 }
 
