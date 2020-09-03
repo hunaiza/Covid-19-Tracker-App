@@ -4,6 +4,7 @@
     color:#222e51;
     font-size: larger;
     font-style: italic;
+    min-height: 120;
     margin: 5px;
     border-radius: 10px;
 /* background: linear-gradient(145deg, #ffffff, #d9dfe4); */
@@ -45,4 +46,10 @@ box-shadow:  5px 5px 10px #d4dadf,
     box-shadow:  10px 10px 20px #c3c9ce, 
                  -10px -10px 20px #f1f8fd;
                  color: #222e51;
-                }
+ }
+
+ #home-icon{
+     font-size: larger;
+ }
+
+                

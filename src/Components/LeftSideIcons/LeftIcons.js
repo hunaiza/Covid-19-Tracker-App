@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const LeftTopheader = () => {
+export const LeftIcons = () => {
     return (
         <div>
             

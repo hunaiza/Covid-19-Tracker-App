@@ -2,7 +2,9 @@
     import { makeStyles } from '@material-ui/core/styles';
     import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-    import './Topheader.css' 
+import './Topheader.css' 
+//import selectBox
+import {SelectBox} from './SelectBox/SelectBox'
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -38,21 +40,25 @@ import Grid from '@material-ui/core/Grid';
 
             <Grid item xs={8}>
                     <Paper className={classes.paper} id="right">
-                        <Grid item xs={2}>
+                        <Grid item xs={1}>
              <Paper className={classes.paper} id="right-in1">
-                 DashBoard
+                                    {/* DashBoard */}
+                         <i class="fa fa-home" aria-hidden="true" id="home-icon"></i>
             </Paper>
                 </Grid>
                             {/* End of right-in grid             */}
+
+                            {/* {selectBox} */}
                             <Grid item xs={6}>
              <Paper className={classes.paper} id="right-in2">
-                 DashBoard
+                <SelectBox/>
             </Paper>
                 </Grid>           
 
                 <Grid item xs={2}>
              <Paper className={classes.paper} id="right-in2">
-                 DashBoard
+                                    
+             <i class="fas fa-bell" id="home-icon"></i>           
             </Paper>
                 </Grid>   
             </Paper>
