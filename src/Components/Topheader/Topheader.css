@@ -1,5 +1,48 @@
 
 #title{
     
-    color:#222e51
+    color:#222e51;
+    font-size: larger;
+    font-style: italic;
+    margin: 5px;
+    border-radius: 10px;
+/* background: linear-gradient(145deg, #ffffff, #d9dfe4); */
+box-shadow:  5px 5px 10px #d4dadf, 
+             -5px -5px 10px #ffffff
 }
+#leftmost{
+    margin: 5px;
+    border-radius: 14px;
+    
+    box-shadow:  5px 5px 10px #cdd3d7, 
+                 -5px -5px 10px #ffffff;
+}
+#virus{
+    color: #222e51;
+    font-size: larger;
+}
+#right{
+    box-shadow:  5px 5px 10px #d4dadf, 
+             -5px -5px 10px #ffffff;
+             justify-content: space-between;
+             display: flex;
+             
+}
+#right-in1{
+    border-radius: 10px;
+    background: #f1f8fd;
+    box-shadow: inset 5px 5px 10px #ccd9e0, 
+                inset -5px -5px 10px #f1f8fd;
+    padding:9px;
+    width:100%;
+    margin: 5px;
+    color: #222e51;
+    font-size: large;
+}
+
+#right-in2{border-radius: 25px;
+    background: #f1f8fd;
+    box-shadow:  10px 10px 20px #c3c9ce, 
+                 -10px -10px 20px #f1f8fd;
+                 color: #222e51;
+                }
