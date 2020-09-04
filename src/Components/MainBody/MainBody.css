@@ -1,0 +1,42 @@
+#main-left-grid{
+    min-height: 10.5cm;
+    background: #f1f8fd;
+    border-radius: 10px;
+    box-shadow:  5px 5px 10px #d4dadf, 
+             -5px -5px 10px #e5edf2
+}
+#leftside-grid{
+    justify-content: center;
+    align-items: center;
+    
+}
+#grid{
+    margin-top: 20px;
+    border-radius: 13px;
+    border-radius: 50%;
+    background: #f1f8fd;
+    box-shadow:  5px 5px 10px #d4dadf, 
+                 -5px -5px 10px #ffffff;
+
+}
+#grid:hover{
+    border-radius: 50%;
+background: #e5edf2;
+box-shadow: inset 5px 5px 10px #d4dadf, 
+            inset -5px -5px 10px #ffffff;
+           cursor: pointer;
+}
+#top-icon{
+    border-radius: 5px;
+background: #f1f8fd;
+box-shadow: inset 5px 5px 10px #e5edf2, 
+            inset -5px -5px 10px #ffffff;
+}
+
+#icons{
+    font-size: large;
+    color:rgb(100, 100, 209);
+    
+    
+}
+

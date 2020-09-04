@@ -7,16 +7,15 @@
     min-height: 120;
     margin: 5px;
     border-radius: 10px;
-/* background: linear-gradient(145deg, #ffffff, #d9dfe4); */
 box-shadow:  5px 5px 10px #d4dadf, 
-             -5px -5px 10px #ffffff
+             -5px -5px 10px #f1f8fd
 }
 #leftmost{
     margin: 5px;
     border-radius: 14px;
     
     box-shadow:  5px 5px 10px #cdd3d7, 
-                 -5px -5px 10px #ffffff;
+                 -5px -5px 10px #f1f8fd;
 }
 #virus{
     color: #222e51;
@@ -43,7 +42,7 @@ box-shadow:  5px 5px 10px #d4dadf,
 
 #right-in2{border-radius: 25px;
     background: #f1f8fd;
-    box-shadow:  10px 10px 20px #c3c9ce, 
+    box-shadow:  10px 10px 20px #d4dadf, 
                  -10px -10px 20px #f1f8fd;
                  color: #222e51;
  }
