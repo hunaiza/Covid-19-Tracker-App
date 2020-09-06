@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   
 }));
-export const MainBody = ({ data }) => {
+export const MainBody = ({ data,country }) => {
   
   // let [dialydata, setdialydata] = useState();
 
@@ -64,13 +64,13 @@ export const MainBody = ({ data }) => {
                 
                 <Grid item xs={3}>
           <Paper  id="rigtside"  >
-              <RightSideChart data={data} />   
+              <RightSideChart data={data} country={country} />   
               
                   
             </Paper>
             <Grid item xs={12}>
           <Paper  id="rigtside" style={{marginTop:"20px",height:"5cm"}}>
-              <BarChart/> 
+                <BarChart data={data} country={country}/> 
               
               
           </Paper>

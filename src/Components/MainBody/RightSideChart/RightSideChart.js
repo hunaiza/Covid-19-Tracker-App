@@ -1,30 +1,34 @@
 import React from 'react'
 import {Pie} from 'react-chartjs-2';
 import './chart.css'
-const data1 = {
-	labels: [
-		'Recoverd',
-		'Death',
-		'Infec'
-	],
-	datasets: [{
-		data: [300, 50, 100],
-		backgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
-		],
-		hoverBackgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
-		]
-	}]
-};
-export const RightSideChart = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
-    return (
+
+export const RightSideChart = ({ data: { confirmed, recovered, deaths, lastUpdate },country }) => {
+   
+	const pieChart = confirmed ? (
+		<Pie
+		  data={{
+			labels: ["Infec", "Recover", "Deaths"],
+			datasets: [
+			  {
+				label: "People",
+				backgroundColor: ['#36A2EB', '#78ff60', '#FF6384'],
+				data: [confirmed.value, recovered.value, deaths.value],
+			  },
+			],
+		  }}
+		  options={{
+			legend: { display: false },
+			title: {
+			  display: true,
+			  text: `Current state in ${country ? country : "World"}`,
+			},
+		  }}
+		/>
+	  ) : null;
+	
+	return (
         <div className="chart-main">
-            <Pie className="chart"  data={data1}/>
+            {pieChart}
         </div>
     )
 }

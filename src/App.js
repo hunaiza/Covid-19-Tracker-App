@@ -34,7 +34,7 @@ class App extends React.Component {
         <div className="container">
         
           <Topheader data={data} getcountry={this.getcountry} />
-          <MainBody data={data} />
+          <MainBody data={data} country={country} />
           
         </div>
       </div>

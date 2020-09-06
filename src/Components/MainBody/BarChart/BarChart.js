@@ -1,31 +1,44 @@
 import React from 'react'
 import {Bar} from 'react-chartjs-2';
-const data = {
-    labels: ['January', 'February', 'March', 'April', 'May'],
-    datasets: [
-      {
-        label: 'My First dataset',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-        hoverBorderColor: 'rgba(255,99,132,1)',
-        data: [65, 59, 80, 81, 56]
-      }
-    ]
-  };
+
   
-export const BarChart = () => {
-    return (
+export const BarChart = ({ data: { confirmed, recovered, deaths, lastUpdate } ,country}) => {
+  
+  const barChart = (
+    confirmed ? (
+      <Bar
+      height={200}
+        data={{
+          labels: ['Infected', 'Recovered', 'Deaths'],
+          datasets: [
+            {
+              label: 'People',
+              backgroundColor: ['#36A2EB', '#78ff60', '#FF6384'],
+              data: [confirmed.value, recovered.value, deaths.value],
+            },
+          ],
+        }}
+        options={{
+          legend: { display: false },
+          title: { display: true, text: country.length ?  `Current state in ${country}`:"Global Data" },
+        }}
+      />
+    ) : null
+  );
+  
+  
+  return (
+      
         <div>
-            <Bar
+            {/* <Bar
           data={data}
           width={95}
-          height={200}
+          
           options={{
             maintainAspectRatio: false
           }}
-        />
+        /> */}
+      {barChart}
         </div>
     )
 }
