@@ -1,5 +1,5 @@
 import React from 'react'
-
+// import {FetchDialyData} from '../GlobalContext/GlobalContext'
 import './MainBody.css'
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,7 +21,11 @@ const useStyles = makeStyles((theme) => ({
   },
   
 }));
-export const MainBody = ({data}) => {
+export const MainBody = ({ data }) => {
+  
+  // let [dialydata, setdialydata] = useState();
+
+
   const classes = useStyles();
   
     return (

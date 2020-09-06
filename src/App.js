@@ -4,12 +4,15 @@ import { Topheader } from './Components/Topheader/Topheader'
 import {MainBody} from './Components/MainBody/MainBody'
 import './App.css';
 //import image from './bg.jpg';
-
 import { FetchData } from './Components/GlobalContext/GlobalContext'
 
 
-function App() {
-  const [data, setdata] = useState({});
+ let response = null;
+ 
+ 
+
+  function App() {
+    const [data, setdata] = useState({});
 
   useEffect(() => {
     const getdata = async () => {
@@ -17,19 +20,37 @@ function App() {
       //console.log(data1);
       setdata(data1);
       
+      
     }
    
     getdata();
- },[])
-
+   
+  }, [])
  
-  return (
+    //   function getdata() {
+    //     if (response!=null) {
+    //       console.log(response);
+    //     //  setdata(response);
+    //     }
+        
+    //   }
+     
+    // // getdata();
+
+    const getcountry = async (country) => {
+      response = await FetchData(country);
+      console.log(response);
+        
+      }
+ 
+    return (
+    
    
     <div  className="main">
       <div className="container">
         
-        <Topheader data={data} />
-        <MainBody data={data}/>
+        <Topheader data={data} getcountry={this.getcountry} />
+        <MainBody data={data} />
           
      </div>
       </div>

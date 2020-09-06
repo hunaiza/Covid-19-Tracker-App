@@ -7,6 +7,7 @@ import './Topheader.css'
 import { SelectBox } from './SelectBox/SelectBox'
 
 
+
     const useStyles = makeStyles((theme) => ({
         root: {
         flexGrow: 1,
@@ -22,7 +23,7 @@ import { SelectBox } from './SelectBox/SelectBox'
         
     }));
     
-    export const Topheader = ({data}) => {
+    export const Topheader = ({data},{getcountry}) => {
         const classes = useStyles();
         console.log(data);
         return (
@@ -53,7 +54,7 @@ import { SelectBox } from './SelectBox/SelectBox'
                             {/* {selectBox} */}
                             <Grid item xs={6}>
              <Paper className={classes.paper} id="right-in2">
-                <SelectBox/>
+                                    <SelectBox getcountry={getcountry}/>
             </Paper>
                 </Grid>           
 

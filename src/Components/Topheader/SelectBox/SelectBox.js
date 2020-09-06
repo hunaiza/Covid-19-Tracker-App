@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { FetchCountries } from '../../GlobalContext/GlobalContext';
+// import {getcountry} from '../../../App'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,14 +16,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const SelectBox = () => {
+export const SelectBox = ({getcountry}) => {
+
+  let [countries, setcountries] = useState([]);
+
+  useEffect( () => {
+    
+    async function fetchcountry() {
+      
+      setcountries(await FetchCountries());
+    }
+    fetchcountry();
+
+  },[setcountries])
+
+  console.log(countries);
+  
     const classes = useStyles();
-  const [age, setAge] = React.useState('');
+
   const [open, setOpen] = React.useState(false);
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+  //   getcountry = (event) => {
+  //   setcountries(countries);
+    
+  // }
 
   const handleClose = () => {
     setOpen(false);
@@ -41,15 +59,18 @@ export const SelectBox = () => {
             open={open}
             onClose={handleClose}
             onOpen={handleOpen}
-            value={age}
-            onChange={handleChange}
+            
+            onChange={(e)=>getcountry(e.target.value)}
           >
-            <MenuItem value="">
-              <em>None</em>
+            <MenuItem value="global">
+              <em>Global</em>
             </MenuItem>
-            <MenuItem value={10}>Pakistan</MenuItem>
+            {countries.map((country,i) =>
+              <MenuItem value={country} key={i} >{country}</MenuItem>
+            )}
+            {/* <MenuItem value={10}>Pakistan</MenuItem>
             <MenuItem value={20}>Australia</MenuItem>
-            <MenuItem value={30}>India</MenuItem>
+            <MenuItem value={30}>India</MenuItem> */}
           </Select>
         </FormControl>
       </div>
