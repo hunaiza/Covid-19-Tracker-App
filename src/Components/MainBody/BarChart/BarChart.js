@@ -30,14 +30,7 @@ export const BarChart = ({ data: { confirmed, recovered, deaths, lastUpdate } ,c
   return (
       
         <div>
-            {/* <Bar
-          data={data}
-          width={95}
-          
-          options={{
-            maintainAspectRatio: false
-          }}
-        /> */}
+      
       {barChart}
         </div>
     )

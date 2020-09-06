@@ -29,7 +29,8 @@ const useStyles = makeStyles({
 
 export const CardPanel = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     const classes = useStyles();
-//   const bull = <span className={classes.bullet}>•</span>;
+     
+ 
  
   if (!confirmed) {
     return (

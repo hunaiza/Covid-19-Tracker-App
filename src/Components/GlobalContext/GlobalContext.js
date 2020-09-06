@@ -19,6 +19,7 @@ export async function FetchData(country) {
             deaths,
             lastUpdate
         }
+       
         return modifydata;
     
        
@@ -28,14 +29,6 @@ export async function FetchData(country) {
      
 }
 
-// export async function FetchDialyData()  {
-//     try {
-//         const { data } = await axios.get(`${url}/daily`);
-//         console.log(data);
-//     } catch (error) {
-        
-//     }
-// }
 
 export async function FetchCountries() {
     try {

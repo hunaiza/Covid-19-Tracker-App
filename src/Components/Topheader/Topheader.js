@@ -3,7 +3,7 @@
     import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import './Topheader.css' 
-//import selectBox
+
 import { SelectBox } from './SelectBox/SelectBox'
 
 
@@ -18,7 +18,7 @@ import { SelectBox } from './SelectBox/SelectBox'
         textAlign: 'center',
         color: theme.palette.text.secondary,
         backgroundColor: '#f1f8fd',
-        // border:'2px solid'
+        
         },
         
     }));
@@ -27,7 +27,7 @@ import { SelectBox } from './SelectBox/SelectBox'
         const classes = useStyles();
         console.log(data);
          
-        // getcountry("okasdf");
+        
       
         return (
             <div className={classes.root}>
@@ -35,7 +35,7 @@ import { SelectBox } from './SelectBox/SelectBox'
             <Grid item xs={1}>
                         <Paper className={classes.paper} id="leftmost">
                         
-                            {/* <i className="fas fa-pen"></i> */}
+                            
                            <i className="fas fa-virus" id="virus"></i>
                          </Paper>
             </Grid>
@@ -48,7 +48,7 @@ import { SelectBox } from './SelectBox/SelectBox'
                     <Paper className={classes.paper} id="right">
                         <Grid item xs={1}>
              <Paper className={classes.paper} id="right-in1">
-                                    {/* DashBoard */}
+                                   
                          <i className="fa fa-home" aria-hidden="true" id="home-icon"></i>
             </Paper>
                 </Grid>

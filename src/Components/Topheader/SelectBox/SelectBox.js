@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { FetchCountries } from '../../GlobalContext/GlobalContext';
-// import {getcountry} from '../../../App'
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const SelectBox = ({ getcountry }) => {
-  // getcountry("Mosin-Malik");
+
 
   let [countries, setcountries] = useState([]);
 
@@ -31,16 +31,13 @@ export const SelectBox = ({ getcountry }) => {
 
   },[setcountries])
 
-  // console.log(countries);
+
   
     const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);
 
-  //   getcountry = (event) => {
-  //   setcountries(countries);
-    
-  // }
+
 
   const handleClose = () => {
     setOpen(false);
@@ -65,9 +62,7 @@ export const SelectBox = ({ getcountry }) => {
             
             onChange={(e)=>getcountry(e.target.value)}
           >
-            {/* <MenuItem value="k">
-              <em>Global</em>
-            </MenuItem> */}
+            
             {countries.map((country,i) =>
               <MenuItem value={country} key={i} >{country}</MenuItem>
             )}

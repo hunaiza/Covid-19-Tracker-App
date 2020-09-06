@@ -15,10 +15,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
     
-    // border:'2px solid #222e51',
       backgroundColor: "#f1f8fd",
-      
-    // boxShadow:"5px 5px 10px #d4dadf, -5px -5px 10px #ffffff"
+   
   },
   
 }));
@@ -26,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 export const CenteralGrid = ({data}) => {
   const classes = useStyles();
 
-  const a = 23;
+
  
     return (
       <div className={classes.root} >
@@ -37,24 +35,7 @@ export const CenteralGrid = ({data}) => {
               <CardPanel data={data}  />
         </Paper>
               </Grid>
-              {/* <Grid item xs={4}>
-                  <Paper className={classes.paper}>
-                   <CardPanel/>
-        </Paper>
-              </Grid>
-              <Grid item xs={4}>
-                  <Paper className={classes.paper}>
-                   <CardPanel/>
-        </Paper>
-      </Grid> */}
-      
-      <Grid item xs={6}>
-          <Paper className={classes.paper}> Chat Panle{a}</Paper>
-              </Grid>
-              <Grid item xs={6}>
-        <Paper className={classes.paper}>Chat Panle</Paper>
-      </Grid>
-      
+             
     </Grid>
   </div>
   )
