@@ -1,0 +1,12 @@
+
+.chart-main{
+    width: 100%;
+    font-size: larger;
+    display: flex;
+}
+
+/* .chart{
+    background: #f1f8fd;
+    box-shadow:  5px 5px 10px #d4dadf, 
+                 -5px -5px 10px #e5edf2;
+} */

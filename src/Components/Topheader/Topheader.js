@@ -4,7 +4,8 @@
 import Grid from '@material-ui/core/Grid';
 import './Topheader.css' 
 //import selectBox
-import {SelectBox} from './SelectBox/SelectBox'
+import { SelectBox } from './SelectBox/SelectBox'
+
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -21,8 +22,9 @@ import {SelectBox} from './SelectBox/SelectBox'
         
     }));
     
-    export const Topheader = () => {
+    export const Topheader = ({data}) => {
         const classes = useStyles();
+        console.log(data);
         return (
             <div className={classes.root}>
         <Grid container spacing={3}>
@@ -30,7 +32,7 @@ import {SelectBox} from './SelectBox/SelectBox'
                         <Paper className={classes.paper} id="leftmost">
                         
                             {/* <i className="fas fa-pen"></i> */}
-                           <i class="fas fa-virus" id="virus"></i>
+                           <i className="fas fa-virus" id="virus"></i>
                          </Paper>
             </Grid>
             <Grid item xs={3}>
@@ -43,7 +45,7 @@ import {SelectBox} from './SelectBox/SelectBox'
                         <Grid item xs={1}>
              <Paper className={classes.paper} id="right-in1">
                                     {/* DashBoard */}
-                         <i class="fa fa-home" aria-hidden="true" id="home-icon"></i>
+                         <i className="fa fa-home" aria-hidden="true" id="home-icon"></i>
             </Paper>
                 </Grid>
                             {/* End of right-in grid             */}
@@ -58,7 +60,7 @@ import {SelectBox} from './SelectBox/SelectBox'
                 <Grid item xs={2}>
              <Paper className={classes.paper} id="right-in2">
                                     
-             <i class="fas fa-bell" id="home-icon"></i>           
+             <i className="fas fa-bell" id="home-icon"></i>           
             </Paper>
                 </Grid>   
             </Paper>

@@ -1,5 +1,5 @@
 #main-left-grid{
-    min-height: 10.5cm;
+    min-height: 6.5cm;
     background: #f1f8fd;
     border-radius: 10px;
     box-shadow:  5px 5px 10px #d4dadf, 
@@ -40,3 +40,14 @@ box-shadow: inset 5px 5px 10px #e5edf2,
     
 }
 
+#centeralPanel{
+    background: #f1f8fd;
+box-shadow:  5px 5px 10px #e5edf2, 
+             -5px -5px 10px #ffffff;
+}
+
+#rigtside{
+    background: #f1f8fd;
+    box-shadow:  5px 5px 10px #e5edf2, 
+                 -5px -5px 10px #e5edf2;
+}

@@ -5,7 +5,9 @@ import './MainBody.css'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
+import {CenteralGrid} from './CenteralGrid/CenteralGrid'
+import { RightSideChart } from './RightSideChart/RightSideChart';
+import { BarChart } from './BarChart/BarChart';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,8 +21,9 @@ const useStyles = makeStyles((theme) => ({
   },
   
 }));
-export const MainBody = () => {
-    const classes = useStyles();
+export const MainBody = ({data}) => {
+  const classes = useStyles();
+  
     return (
         <div className={classes.root}>
       <Grid container spacing={3}>
@@ -47,12 +50,27 @@ export const MainBody = () => {
                 {/* End of LeftMost Grid */}
                 
                 {/* Starting centeral Grid */}
-        <Grid item xs={8}>
-          <Paper className={classes.paper}>xs=6</Paper>
+        <Grid item xs={8} >
+            <Paper className={classes.paper} id="centeralPanel">
+              <CenteralGrid data={data}/>
+            </Paper>
+            
                 </Grid>
+                {/* End of centeral Grid */}
                 
                 <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper  id="rigtside"  >
+              <RightSideChart data={data} />   
+              
+                  
+            </Paper>
+            <Grid item xs={12}>
+          <Paper  id="rigtside" style={{marginTop:"20px",height:"5cm"}}>
+              <BarChart/> 
+              
+              
+          </Paper>
+        </Grid>
         </Grid>
       </Grid>
     </div>
