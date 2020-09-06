@@ -23,9 +23,12 @@ import { SelectBox } from './SelectBox/SelectBox'
         
     }));
     
-    export const Topheader = ({data},{getcountry}) => {
+    export const Topheader = ({data,getcountry}) => {
         const classes = useStyles();
         console.log(data);
+         
+        // getcountry("okasdf");
+      
         return (
             <div className={classes.root}>
         <Grid container spacing={3}>

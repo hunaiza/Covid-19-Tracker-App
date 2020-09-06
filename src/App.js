@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React from 'react';
 //import { makeStyles } from '@material-ui/core/styles';
 import { Topheader } from './Components/Topheader/Topheader'
 import {MainBody} from './Components/MainBody/MainBody'
@@ -7,55 +7,40 @@ import './App.css';
 import { FetchData } from './Components/GlobalContext/GlobalContext'
 
 
- let response = null;
- 
- 
+class App extends React.Component {
+  state = {
+    data: {},
+    country: '',
+  }
+  
+  async componentDidMount() {
+    const data = await FetchData();
 
-  function App() {
-    const [data, setdata] = useState({});
+    this.setState({ data });
+  }
+  getcountry = async (country) => {
+    const data = await FetchData(country);
+    // console.log(country);
+    this.setState({ data, country: country });
+  }
 
-  useEffect(() => {
-    const getdata = async () => {
-      const data1 = await FetchData();
-      //console.log(data1);
-      setdata(data1);
-      
-      
-    }
-   
-    getdata();
-   
-  }, [])
- 
-    //   function getdata() {
-    //     if (response!=null) {
-    //       console.log(response);
-    //     //  setdata(response);
-    //     }
-        
-    //   }
-     
-    // // getdata();
+  render() {
+    const { data, country } = this.state;
 
-    const getcountry = async (country) => {
-      response = await FetchData(country);
-      console.log(response);
-        
-      }
- 
     return (
     
    
-    <div  className="main">
-      <div className="container">
+      <div className="main">
+        <div className="container">
         
-        <Topheader data={data} getcountry={this.getcountry} />
-        <MainBody data={data} />
+          <Topheader data={data} getcountry={this.getcountry} />
+          <MainBody data={data} />
           
-     </div>
+        </div>
       </div>
       
-  );
+    );
+  }
 }
 
 export default App;

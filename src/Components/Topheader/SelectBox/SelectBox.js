@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const SelectBox = ({getcountry}) => {
+export const SelectBox = ({ getcountry }) => {
+  // getcountry("Mosin-Malik");
 
   let [countries, setcountries] = useState([]);
 
@@ -30,7 +31,7 @@ export const SelectBox = ({getcountry}) => {
 
   },[setcountries])
 
-  console.log(countries);
+  // console.log(countries);
   
     const classes = useStyles();
 
@@ -48,6 +49,8 @@ export const SelectBox = ({getcountry}) => {
   const handleOpen = () => {
     setOpen(true);
   };
+   
+     
     return (
         <div>
         
@@ -62,15 +65,13 @@ export const SelectBox = ({getcountry}) => {
             
             onChange={(e)=>getcountry(e.target.value)}
           >
-            <MenuItem value="global">
+            {/* <MenuItem value="k">
               <em>Global</em>
-            </MenuItem>
+            </MenuItem> */}
             {countries.map((country,i) =>
               <MenuItem value={country} key={i} >{country}</MenuItem>
             )}
-            {/* <MenuItem value={10}>Pakistan</MenuItem>
-            <MenuItem value={20}>Australia</MenuItem>
-            <MenuItem value={30}>India</MenuItem> */}
+            
           </Select>
         </FormControl>
       </div>
